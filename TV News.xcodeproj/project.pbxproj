@@ -12,6 +12,8 @@
 		AC8476862425EC80008FA819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8476842425EC80008FA819 /* Main.storyboard */; };
 		AC8476882425EC81008FA819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8476872425EC81008FA819 /* Assets.xcassets */; };
 		AC84768B2425EC81008FA819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8476892425EC81008FA819 /* LaunchScreen.storyboard */; };
+		AC8476932425F0CD008FA819 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8476922425F0CD008FA819 /* SwiftyJSON.swift */; };
+		AC847695242600FD008FA819 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC847694242600FD008FA819 /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AC8476872425EC81008FA819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC84768A2425EC81008FA819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC84768C2425EC81008FA819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC8476922425F0CD008FA819 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		AC847694242600FD008FA819 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,9 @@
 			children = (
 				AC8476802425EC80008FA819 /* AppDelegate.swift */,
 				AC8476822425EC80008FA819 /* ViewController.swift */,
+				AC847694242600FD008FA819 /* NewsCell.swift */,
 				AC8476842425EC80008FA819 /* Main.storyboard */,
+				AC8476922425F0CD008FA819 /* SwiftyJSON.swift */,
 				AC8476872425EC81008FA819 /* Assets.xcassets */,
 				AC8476892425EC81008FA819 /* LaunchScreen.storyboard */,
 				AC84768C2425EC81008FA819 /* Info.plist */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8476932425F0CD008FA819 /* SwiftyJSON.swift in Sources */,
 				AC8476832425EC80008FA819 /* ViewController.swift in Sources */,
+				AC847695242600FD008FA819 /* NewsCell.swift in Sources */,
 				AC8476812425EC80008FA819 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
