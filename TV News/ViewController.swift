@@ -60,5 +60,29 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return CGSize(width: 375.0, height: 375.0)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let reader = storyboard?.instantiateViewController(withIdentifier: "Reader") as? ReaderViewController else { return }
+        reader.article = articles[indexPath.row]
+        present(reader, animated: true, completion: nil)
+    }
+    
 }
 
+extension ViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        if text.isEmpty {
+            articles = [JSON]()
+            collectionView?.reloadData()
+        } else {
+            guard let url = URL(string: "https://content.guardianapis.com/Search?api-key=\(apiKey)&show-fields=thumbnail,headline,standfirst,body") else { return }
+            DispatchQueue.global(qos: .userInteractive).async {
+                self.fetchWith(url: url)
+            }
+        }
+    }
+    
+    
+    
+}
