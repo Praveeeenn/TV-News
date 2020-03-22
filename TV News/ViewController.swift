@@ -16,7 +16,10 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullURL = "https://content.guardianapis.com/\(title!.lowercased())?api-key=\(apiKey)&show-fields=thumbnail,headline,standfirst,body"
+        guard let text = title else {
+            return
+        }
+        fullURL = "https://content.guardianapis.com/\(text.lowercased())?api-key=\(apiKey)&show-fields=thumbnail,headline,standfirst,body"
         DispatchQueue.global(qos: .userInteractive).async {
             self.fetchWith(url: URL(string: self.fullURL)!)
         }
@@ -76,7 +79,7 @@ extension ViewController: UISearchResultsUpdating {
             articles = [JSON]()
             collectionView?.reloadData()
         } else {
-            guard let url = URL(string: "https://content.guardianapis.com/Search?api-key=\(apiKey)&show-fields=thumbnail,headline,standfirst,body") else { return }
+            guard let url = URL(string: "https://content.guardianapis.com/search?api-key=\(apiKey)&q=\(text)&show-fields=thumbnail,headline,standfirst,body") else { return }
             DispatchQueue.global(qos: .userInteractive).async {
                 self.fetchWith(url: url)
             }
