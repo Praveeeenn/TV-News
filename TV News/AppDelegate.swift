@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let categories: [String] = ["Business", "Culture", "Sports", "Techonology", "Travel"]
+    let categories: [String] = ["Business", "Culture", "Sport", "Technology", "Travel"]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 //7. Assign the viewcontroller array to the tab bar
-                
+                tabBarController.viewControllers = viewControllers
             }
             
         }
